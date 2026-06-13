@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PracticeLog – Sign In</title>
+  <meta name="description" content="Sign in or create your PracticeLog account to start tracking your music practice."/>
+  <link rel="stylesheet" href="css/auth.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="auth-bg">
+
+    <!-- LEFT: Hero Panel -->
+    <div class="auth-hero">
+      <div class="hero-content">
+        <div class="hero-brand">
+          <span class="hero-brand-icon">♪</span>
+          <span class="hero-brand-name">PracticeLog</span>
+        </div>
+        <h1 class="hero-title">Your Musical Journey<br/>Starts Here</h1>
+        <p class="hero-subtitle">Track sessions, build streaks, unlock achievements and become the musician you want to be.</p>
+        <div class="hero-features">
+          <div class="hero-feature">🎵 Smart Practice Timer</div>
+          <div class="hero-feature">📊 Progress Analytics</div>
+          <div class="hero-feature">🔥 Streak Tracking</div>
+          <div class="hero-feature">🏆 Achievement Badges</div>
+          <div class="hero-feature">🎯 Practice Goals</div>
+          <div class="hero-feature">📅 Visual Heatmap</div>
+        </div>
+      </div>
+      <div class="hero-decoration">
+        <div class="hero-circle c1"></div>
+        <div class="hero-circle c2"></div>
+        <div class="hero-circle c3"></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Auth Panel -->
+    <div class="auth-panel">
+      <div class="auth-inner">
+        <div class="auth-logo">
+          <span class="brand-icon-sm">♪</span>
+          <span class="brand-name-sm">PracticeLog</span>
+        </div>
+
+        <!-- Tabs -->
+        <div class="auth-tabs" id="auth-tabs">
+          <button class="auth-tab active" data-tab="signin">Sign In</button>
+          <button class="auth-tab" data-tab="signup">Sign Up</button>
+        </div>
+
+        <!-- Sign In -->
+        <form class="auth-form active" id="signin-form" autocomplete="on">
+          <div class="auth-form-group">
+            <label for="signin-email">Email</label>
+            <input type="email" id="signin-email" placeholder="you@example.com" autocomplete="email" required/>
+          </div>
+          <div class="auth-form-group">
+            <label for="signin-password">Password</label>
+            <input type="password" id="signin-password" placeholder="••••••••" autocomplete="current-password" required/>
+          </div>
+          <div class="auth-link-row">
+            <button type="button" class="text-link" id="forgot-link">Forgot password?</button>
+          </div>
+          <button type="submit" class="auth-btn">Sign In</button>
+          <p class="auth-msg" id="signin-msg"></p>
+        </form>
+
+        <!-- Sign Up -->
+        <form class="auth-form" id="signup-form" autocomplete="on">
+          <div class="auth-form-row">
+            <div class="auth-form-group">
+              <label for="signup-name">Full Name</label>
+              <input type="text" id="signup-name" placeholder="John Doe" autocomplete="name" required/>
+            </div>
+            <div class="auth-form-group">
+              <label for="signup-username">Username</label>
+              <input type="text" id="signup-username" placeholder="johnguitarist" required/>
+            </div>
+          </div>
+          <div class="auth-form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" placeholder="you@example.com" autocomplete="email" required/>
+          </div>
+          <div class="auth-form-row">
+            <div class="auth-form-group">
+              <label for="signup-password">Password</label>
+              <input type="password" id="signup-password" placeholder="Min. 6 characters" required/>
+            </div>
+            <div class="auth-form-group">
+              <label for="signup-confirm">Confirm</label>
+              <input type="password" id="signup-confirm" placeholder="Repeat password" required/>
+            </div>
+          </div>
+          <div class="auth-checkbox-row">
+            <input type="checkbox" id="agree-terms"/>
+            <label for="agree-terms">I agree to the <a href="terms.html" target="_blank" class="text-link">Terms &amp; Conditions</a></label>
+          </div>
+          <button type="submit" class="auth-btn">Create Account</button>
+          <p class="auth-msg" id="signup-msg"></p>
+        </form>
+
+        <!-- Forgot Password -->
+        <form class="auth-form" id="forgot-form">
+          <p class="forgot-desc">Enter your email and we'll send you a reset link.</p>
+          <div class="auth-form-group">
+            <label for="forgot-email">Email</label>
+            <input type="email" id="forgot-email" placeholder="you@example.com" required/>
+          </div>
+          <button type="submit" class="auth-btn">Send Reset Link</button>
+          <button type="button" class="text-link back-btn" id="back-to-signin">← Back to Sign In</button>
+          <p class="auth-msg" id="forgot-msg"></p>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
